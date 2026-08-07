@@ -26,7 +26,10 @@ export default function SteppedSection({
     direction: "forward",
   });
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const viewportRef = useRef<HTMLDivElement | null>(null);
   const isFirstRender = useRef(true);
+  const touchStart = useRef<{ x: number; y: number } | null>(null);
+  const touchAxis = useRef<"horizontal" | "vertical" | null>(null);
 
   // Clicking this section's nav link should always land on card 1, even if
   // a previous visit left it further along.
@@ -86,6 +89,56 @@ export default function SteppedSection({
     setState((s) => (i === s.active ? s : { active: i, previous: s.active, direction: i > s.active ? "forward" : "back" }));
   }
 
+  // Swipe support: attached as a native (non-passive) listener because
+  // React's synthetic touchmove handlers are passive by default, which
+  // would silently block our preventDefault() and let the page scroll
+  // horizontally along with the card. Axis is locked on the first
+  // meaningful move so a vertical swipe still scrolls the page normally
+  // instead of being hijacked by the carousel.
+  useEffect(() => {
+    const el = viewportRef.current;
+    if (!el) return;
+
+    function onTouchStart(e: TouchEvent) {
+      const t = e.touches[0];
+      touchStart.current = { x: t.clientX, y: t.clientY };
+      touchAxis.current = null;
+    }
+
+    function onTouchMove(e: TouchEvent) {
+      if (!touchStart.current) return;
+      const t = e.touches[0];
+      const dx = t.clientX - touchStart.current.x;
+      const dy = t.clientY - touchStart.current.y;
+      if (touchAxis.current === null && (Math.abs(dx) > 8 || Math.abs(dy) > 8)) {
+        touchAxis.current = Math.abs(dx) > Math.abs(dy) ? "horizontal" : "vertical";
+      }
+      if (touchAxis.current === "horizontal") {
+        e.preventDefault();
+      }
+    }
+
+    function onTouchEnd(e: TouchEvent) {
+      if (touchStart.current && touchAxis.current === "horizontal") {
+        const dx = e.changedTouches[0].clientX - touchStart.current.x;
+        const threshold = 50;
+        if (dx <= -threshold) step(1);
+        else if (dx >= threshold) step(-1);
+      }
+      touchStart.current = null;
+      touchAxis.current = null;
+    }
+
+    el.addEventListener("touchstart", onTouchStart, { passive: true });
+    el.addEventListener("touchmove", onTouchMove, { passive: false });
+    el.addEventListener("touchend", onTouchEnd);
+    return () => {
+      el.removeEventListener("touchstart", onTouchStart);
+      el.removeEventListener("touchmove", onTouchMove);
+      el.removeEventListener("touchend", onTouchEnd);
+    };
+  }, [steps.length]);
+
   const { active, previous, direction } = state;
 
   return (
@@ -112,7 +165,7 @@ export default function SteppedSection({
               card shrinks the container and the arrows visibly jump
               vertically to re-center on it. Only opacity/transform (not
               layout) determine which card is actually visible. */}
-          <div className={styles.cardViewport}>
+          <div className={styles.cardViewport} ref={viewportRef}>
             {steps.map((stepContent, i) => {
               let cardClass: string;
               if (i === active) {

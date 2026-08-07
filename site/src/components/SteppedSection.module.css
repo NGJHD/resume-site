@@ -58,6 +58,7 @@
   min-width: 0;
   display: grid;
   overflow: hidden;
+  touch-action: pan-y;
 }
 
 .card {
