@@ -1,2 +1,3 @@
 *.pdf
 .claude/*.local.*
+.vercel
