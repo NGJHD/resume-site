@@ -20,7 +20,7 @@ export default function About() {
                 Over 13 years at ST Engineering Cloud &amp; Data Center Solutions (previously Mission Software & Services), moving
                 from a solo full-stack engineer on video wall systems to a software
                 manager leading frontend and backend teams on live monitoring platforms
-                and naval mission systems.
+                and mission systems.
               </p>
             </Reveal>
 

@@ -7,17 +7,17 @@ export const profile = {
   phone: "9474 9449",
   email: "ng.jh.darren@outlook.com",
   summary:
-    "A 38 yrs old Singaporean and father of two. Frontend / Full-stack engineer with 13+ years of experience designing and developing mission critical systems for defence and enterprise environments.",
+    "Frontend / Full-stack engineer with 13+ years of experience designing and developing mission critical systems for defence and enterprise environments.",
 };
 
 export const skills = [
   {
     category: "Frontend",
-    items: ["React", "JavaScript", "TypeScript", "Grafana", "HTML/CSS", "C# WPF"],
+    items: ["React", "JavaScript", "Grafana", "C# WPF"],
   },
   {
     category: "Backend",
-    items: ["Node.js", "Feathers.js", "SQL", "C# .NET"],
+    items: ["Node.js", "C# .NET"],
   },
   {
     category: "Tools & DevOps",
@@ -54,56 +54,56 @@ export const experience: Employer[] = [
     projects: [
       {
         name: "Integrated Monitoring & Management System",
-        role: "Software Manager",
-        team: "2x Frontend, 4x Backend",
+        role: "UI/UX Manager",
+        // team: "2x Frontend, 4x Backend",
         duration: "2020 – Ongoing",
         description:
-          "Led development of a monitoring platform tracking network and equipment health across multiple SAF camps.",
+          "Led frontend development of a monitoring platform tracking network and equipment health status across multiple sites.",
         tags: [
-          "React",
-          "React Admin",
-          "Grafana",
-          "HTML/CSS",
-          "SQL",
-          "TypeScript",
-          "Scrum",
-          "Agile",
-          "JSON",
-          "REST",
-          "Feathers.js",
-          "Kubernetes",
-          "Message Queue",
-          "NATS",
-          "Docker",
-          "Git",
+          // "React",
+          // "React Admin",
+          // "Grafana",
+          // "HTML/CSS",
+          // "SQL",
+          // "TypeScript",
+          // "Scrum",
+          // "Agile",
+          // "JSON",
+          // "REST",
+          // "Feathers.js",
+          // "Kubernetes",
+          // "Message Queue",
+          // "NATS",
+          // "Docker",
+          // "Git",
         ],
       },
       {
-        name: "Training Dashboard",
+        name: "Analytics Dashboard",
         role: "Frontend Lead",
-        team: "1x Frontend, 7x Backend",
+        // team: "1x Frontend, 7x Backend",
         duration: "2019 – 2020 (1 year)",
         description:
-          "Collaborated with DSTA to design and implement a data analytics dashboard visualizing Navy training performance metrics.",
-        tags: ["C#", "React", "Grafana", "HTML/CSS", "WPF", "PostgreSQL", "Scrum", ".NET"],
+          "Designed and implemented an analytics dashboard to display various metrics.",
+        tags: [],
       },
       {
         name: "Various Video Wall Projects",
         role: "Full Stack Engineer",
-        team: "Just me",
+        // team: "Just me",
         duration: "2012 – 2019 (7 years)",
         description:
-          "Sole engineer developing 7 unique video wall systems, both frontend and backend, integrating Datapath hardware and API for large-scale display solutions.",
-        tags: ["C#", "WPF", ".NET", "Win32 API", "Datapath API"],
+          "Sole engineer developing multiple video wall solutions for various enterprises.",
+        tags: [],
       },
       {
         name: "Littoral Mission Vessel",
         role: "Software Manager",
-        team: "2x Frontend, 7x Backend",
+        // team: "2x Frontend, 7x Backend",
         duration: "2013 – 2020 (7 years)",
         description:
-          "Involved from conceptualization to deployment of multiple mission applications for the Navy's Littoral Mission Vessel, covering command, communication, and control systems. 1 of 2 personnel representing ST Electronics Infosoft at the first LMV commissioning in 2017.",
-        tags: ["C#", "WPF", ".NET"],
+          "Involved from conceptualization to deployment of multiple mission critical applications.",
+        tags: [],
         note: "Notable applications delivered under this programme:",
       },
     ],
@@ -120,20 +120,20 @@ export const missionApps: MissionApp[] = [
   {
     name: "Command Console",
     description:
-      "Independently designed and implemented a command console providing real-time situational awareness via multiple integrated data and video feeds for the Commanding Officer (CO).",
-    tags: ["Full Stack", "UI/UX Designer", "C#", "WPF", ".NET", "DirectShow API"],
+      "Designed and implemented an application providing real-time situational awareness via multiple integrated data and video feeds.",
+    tags: [],
   },
   {
     name: "Less-Lethal Weapon Control System",
     description:
-      "Part of a team of 2, developed control software for LRAD (a very loud loudspeaker) and Water Cannon systems, enabling precise targeting and activation through integrated command interfaces.",
-    tags: ["Frontend", "UI/UX Designer", "C#", "WPF", ".NET", "DirectShow API"],
+      "Developed the frontend to control the water cannon, enabling precise targeting and activation.",
+    tags: [],
   },
   {
-    name: "Chat and Post-It",
+    name: "Chat",
     description:
-      "Independently built a lightweight self-discovery communication platform enabling operators to exchange messages, images, files, as well as notes via an integrated post-it companion app.",
-    tags: ["Full Stack", "UI/UX Designer", "C#", "WPF", ".NET"],
+      "Built a lightweight self-discovery communication platform enabling operators to exchange messages and other files.",
+    tags: [],
   },
 ];
 
@@ -147,7 +147,7 @@ export const personalProjects: PersonalProject[] = [
   {
     name: "Movie Catalogue Software",
     description:
-      "Developed a lightweight C# desktop app that automatically scrapes and catalogues movie details from IMDB.",
+      "Developed a lightweight C# desktop app that automatically scrapes and catalogues movie details from OMDB.",
     tags: ["C#", "WPF", ".NET"],
   },
   {

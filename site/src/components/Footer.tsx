@@ -15,13 +15,13 @@ export default function Footer() {
           </p>
 
           <div className={styles.channels}>
-            <a
+            {/* <a
               href={`tel:${profile.phone.replace(/\s+/g, "")}`}
               className={`hud-panel hud-panel-sm ${styles.channel}`}
             >
               <span className={styles.channelLabel}>Phone</span>
               <span className={styles.channelValue}>{profile.phone}</span>
-            </a>
+            </a> */}
             <a
               href={`mailto:${profile.email}`}
               className={`hud-panel hud-panel-sm ${styles.channel}`}

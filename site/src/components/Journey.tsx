@@ -15,7 +15,7 @@ type StepImage = { src: string; width: number; height: number; caption?: string 
 
 const PROJECT_IMAGES: Record<string, StepImage> = {
   "Integrated Monitoring & Management System": { src: monitoringImg, width: 643, height: 360 },
-  "Training Dashboard": { src: trainingImg, width: 960, height: 538 },
+  "Analytics Dashboard": { src: trainingImg, width: 960, height: 538 },
   "Various Video Wall Projects": { src: videowallImg, width: 1200, height: 675 },
   "Littoral Mission Vessel": {
     src: lmvShipImg,
@@ -28,7 +28,7 @@ const PROJECT_IMAGES: Record<string, StepImage> = {
 const SUBAPP_IMAGES: Record<string, StepImage> = {
   "Command Console": { src: commandConsoleImg, width: 698, height: 393 },
   "Less-Lethal Weapon Control System": { src: watercannonImg, width: 508, height: 338 },
-  "Chat and Post-It": { src: chatpostitImg, width: 752, height: 564 },
+  "Chat": { src: chatpostitImg, width: 752, height: 564 },
 };
 
 function StepCard({
