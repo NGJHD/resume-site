@@ -6,27 +6,6 @@ import musicPlayerImg from "../assets/images/project-music-player.jpg";
 import movieCatalogueImg from "../assets/images/project-movie-catalogue.jpg";
 import cryptoImg from "../assets/images/project-crypto.jpg";
 
-function ChartIcon() {
-  return (
-    <svg viewBox="0 0 64 64" fill="none" className={styles.icon} aria-hidden="true">
-      <path
-        d="M12 44V28M24 44V18M36 44V32M48 44V22"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-      />
-      <path d="M8 50h48" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-      <path
-        d="M10 30l10-8 10 6 10-12"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
 const PROJECT_VISUALS: Record<
   string,
   { image?: { src: string; width: number; height: number }; icon?: ComponentType }
@@ -37,7 +16,7 @@ const PROJECT_VISUALS: Record<
 };
 
 export default function Projects() {
-  const steps = personalProjects.map((project, i) => {
+  const steps = personalProjects.map((project) => {
     const visual = PROJECT_VISUALS[project.name];
     const Icon = visual?.icon;
     return (

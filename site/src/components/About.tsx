@@ -1,4 +1,4 @@
-import { profile, skills } from "../data/resume";
+import { skills } from "../data/resume";
 import Reveal from "./Reveal";
 import styles from "./About.module.css";
 
