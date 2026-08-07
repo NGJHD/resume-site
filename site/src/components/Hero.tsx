@@ -3,7 +3,7 @@ import styles from "./Hero.module.css";
 
 const FACTS = [
   { label: "Experience", value: "13+ Years" },
-  { label: "Domain", value: "Defence & Enterprise" },
+  // { label: "Domain", value: "Defence & Enterprise" },
   { label: "Based In", value: "Singapore" },
 ];
 
