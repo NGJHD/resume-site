@@ -1,0 +1,151 @@
+.bg {
+  background: radial-gradient(circle at 12% 15%, rgba(45, 140, 255, 0.22), transparent 44%),
+    radial-gradient(circle at 92% 88%, rgba(79, 216, 218, 0.22), transparent 46%);
+}
+
+.contentWrap {
+  padding-top: clamp(5rem, 12vw, 8rem);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: clamp(2rem, 5vw, 3.5rem);
+  align-items: start;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  min-width: 0;
+}
+
+.columnLabel {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  color: var(--text-tertiary);
+}
+
+.certList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.certCard {
+  padding: 0.85rem 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.certBadge {
+  width: 44px;
+  height: 44px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.certText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  min-width: 0;
+}
+
+.certYear {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--accent);
+  letter-spacing: 0.06em;
+}
+
+.certName {
+  font-size: 0.92rem;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+.eduList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.eduCard {
+  padding: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.awardPhoto {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  margin-bottom: 0.5rem;
+}
+
+.eduHead {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.4rem 1rem;
+}
+
+.school {
+  font-size: 1.05rem;
+}
+
+.duration {
+  font-size: 0.72rem;
+  color: var(--text-tertiary);
+  white-space: nowrap;
+}
+
+.subtitle {
+  font-size: 0.78rem;
+  color: var(--text-tertiary);
+  letter-spacing: 0.02em;
+}
+
+.program {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding-top: 0.3rem;
+}
+
+.details li {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  padding-left: 1rem;
+  position: relative;
+}
+
+.details li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 5px;
+  height: 5px;
+  background: var(--accent);
+  border-radius: 50%;
+}
+
+@media (max-width: 780px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}

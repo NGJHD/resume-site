@@ -1,0 +1,152 @@
+.section {
+  position: relative;
+  overflow: hidden;
+}
+
+.bgLayer {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.75rem, 2vw, 1.5rem);
+  margin-top: clamp(2rem, 5vw, 3rem);
+}
+
+.arrow {
+  flex-shrink: 0;
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--accent-soft-border);
+  background: var(--accent-soft);
+  color: var(--accent);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 16px rgba(79, 216, 218, 0.35), 0 0 0 1px rgba(79, 216, 218, 0.08) inset;
+  transition: box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease, transform 0.15s ease;
+}
+
+.arrow:hover {
+  border-color: var(--accent);
+  background: rgba(79, 216, 218, 0.2);
+  /* box-shadow: 0 0 28px rgba(79, 216, 218, 0.6), 0 0 0 1px rgba(79, 216, 218, 0.25) inset; */
+  transform: scale(1.06);
+}
+
+.arrow:active {
+  transform: scale(0.97);
+}
+
+.arrow svg {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+.cardViewport {
+  flex: 1;
+  min-width: 0;
+  display: grid;
+  overflow: hidden;
+}
+
+.card {
+  grid-area: 1 / 1;
+  width: 100%;
+  min-width: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1.55s cubic-bezier(0.16, 0.8, 0.24, 1), transform 1.55s cubic-bezier(0.16, 0.8, 0.24, 1);
+}
+
+.cardActive {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+  z-index: 2;
+}
+
+.cardExitLeft {
+  transform: translateX(-100%);
+  z-index: 1;
+}
+
+.cardExitRight {
+  transform: translateX(100%);
+  z-index: 1;
+}
+
+.cardParkRight {
+  transform: translateX(100%);
+}
+
+.cardParkLeft {
+  transform: translateX(-100%);
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  margin-top: clamp(1.25rem, 3vw, 2rem);
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  padding: 0;
+  border-radius: 50%;
+  border: 1px solid var(--border-bright);
+  background: transparent;
+  transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.dot:hover {
+  border-color: var(--accent);
+}
+
+.dotActive {
+  background: var(--accent);
+  border-color: var(--accent);
+  transform: scale(1.2);
+}
+
+@media (max-width: 640px) {
+  .arrow {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .arrow svg {
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+
+  .carousel {
+    gap: 0.5rem;
+  }
+}
+
+/* The site-wide reduced-motion rule (index.css) forces every transition to
+   ~0ms, which also silently killed this carousel's slide. That blanket rule
+   is right for decorative motion, but this transition is the primary way a
+   user perceives "which direction did I just navigate" — functional
+   feedback, not decoration — so it gets a shorter (not zero) duration here
+   instead of inheriting the global override. */
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    /* Must win over index.css's blanket `!important` reduced-motion reset. */
+    transition-duration: 0.6s !important;
+  }
+}

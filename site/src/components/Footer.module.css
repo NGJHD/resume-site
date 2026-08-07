@@ -1,0 +1,74 @@
+.footer {
+  position: relative;
+  border-top: 1px solid var(--border);
+  background: radial-gradient(circle at 50% 0%, rgba(79, 216, 218, 0.14), transparent 60%);
+}
+
+.inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: clamp(3.5rem, 8vw, 6rem) var(--edge-pad) 2rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.1rem;
+  max-width: 620px;
+}
+
+.heading {
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  letter-spacing: -0.01em;
+}
+
+.sub {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.channels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: 1rem;
+  width: 100%;
+}
+
+.channel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 0.9rem 1.4rem;
+  transition: border-color 0.2s ease, color 0.2s ease;
+  min-width: 0;
+}
+
+.channel:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.channelLabel {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+}
+
+.channelValue {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  word-break: break-word;
+}
+
+.bottom {
+  margin-top: clamp(3rem, 6vw, 4.5rem);
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.7rem;
+  color: var(--text-tertiary);
+  letter-spacing: 0.04em;
+}

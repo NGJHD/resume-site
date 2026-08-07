@@ -1,0 +1,89 @@
+.bg {
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(circle at 15% 20%, rgba(79, 216, 218, 0.22), transparent 46%),
+    radial-gradient(circle at 85% 75%, rgba(45, 140, 255, 0.18), transparent 44%);
+}
+
+.contentWrap {
+  background: linear-gradient(180deg, transparent 0%, var(--bg) 88%);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: clamp(2.5rem, 6vw, 5rem);
+  align-items: start;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.heading {
+  max-width: 20ch;
+}
+
+.body {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  max-width: 52ch;
+}
+
+.matrix {
+  overflow: hidden;
+}
+
+.matrixHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1.2rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  color: var(--text-tertiary);
+}
+
+.groups {
+  display: flex;
+  flex-direction: column;
+}
+
+.group {
+  padding: 1.1rem 1.2rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.group:last-child {
+  border-bottom: none;
+}
+
+.groupLabel {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .heading {
+    max-width: none;
+  }
+}

@@ -1,0 +1,356 @@
+.bg {
+  background: repeating-linear-gradient(
+      115deg,
+      rgba(79, 216, 218, 0.1) 0px,
+      rgba(79, 216, 218, 0.1) 1.5px,
+      transparent 1.5px,
+      transparent 64px
+    ),
+    radial-gradient(circle at 88% 12%, rgba(79, 216, 218, 0.24), transparent 46%),
+    radial-gradient(circle at 6% 92%, rgba(45, 140, 255, 0.2), transparent 44%),
+    linear-gradient(180deg, rgba(45, 140, 255, 0.05), transparent 60%);
+  background-size: auto, auto, auto, auto;
+}
+
+.employerHead {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  margin-top: 1.25rem;
+}
+
+.employerHead :global(.status-dot) {
+  margin-top: 0.5rem;
+}
+
+.employerName {
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+}
+
+.employerDuration {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 0.76rem;
+  color: var(--text-tertiary);
+  margin-top: 0.25rem;
+}
+
+.liveBadge {
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  padding: 0.16rem 0.4rem;
+  border-radius: 3px;
+  background: var(--status-live-soft);
+  color: var(--status-live);
+  border: 1px solid var(--status-live-border);
+}
+
+.stepCard {
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.stepFigure {
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: clamp(1rem, 2.5vw, 1.5rem);
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(79, 216, 218, 0.05) 0px,
+    rgba(79, 216, 218, 0.05) 1px,
+    transparent 1px,
+    transparent 10px
+  );
+  border-bottom: 1px solid var(--border-bright);
+}
+
+.stepImage {
+  /* width/height:100% lets the image grow to fill the figure area (the
+     inline max-width/max-height caps set per-image in Journey.tsx clamp it
+     back down, relative to native resolution, to avoid upscale blur) —
+     those inline max-* values compose with these as a clamp, so this
+     max-width/max-height:100% is only a fallback for if inline is absent. */
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  object-fit: contain;
+  border-radius: 3px;
+  /* box-shadow: 0 0 0 1px rgba(79, 216, 218, 0.25); */
+}
+
+.figCaption {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-tertiary);
+  flex-shrink: 0;
+}
+
+.stepText {
+  flex-shrink: 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  padding: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+.stepHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.4rem 1rem;
+}
+
+.stepTitle {
+  font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+}
+
+.stepDuration {
+  font-size: 0.7rem;
+  color: var(--text-tertiary);
+  white-space: nowrap;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.4rem;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+.meta strong {
+  color: var(--text-tertiary);
+  font-weight: 500;
+  margin-right: 0.35rem;
+}
+
+.stepDescription {
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  /* max-width: 62ch; */
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.lmvCard {
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.lmvTop {
+  flex: 0 0 42%;
+  min-height: 0;
+  display: flex;
+  gap: clamp(1rem, 2.5vw, 1.75rem);
+  padding: clamp(1rem, 2.5vw, 1.5rem);
+  border-bottom: 1px solid var(--border-bright);
+}
+
+.lmvFigure {
+  flex: 0 0 32%;
+  min-width: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.lmvImage {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 3px;
+  /* box-shadow: 0 0 0 1px rgba(79, 216, 218, 0.25); */
+}
+
+.lmvInfo {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  overflow: hidden;
+}
+
+.lmvSubApps {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: clamp(0.85rem, 2vw, 1.25rem) clamp(1rem, 2.5vw, 1.5rem);
+  overflow: hidden;
+}
+
+.subAppsLabel {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.05em;
+  color: var(--text-tertiary);
+  flex-shrink: 0;
+}
+
+.subAppGrid {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(0.75rem, 2vw, 1.25rem);
+}
+
+.subAppCol {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  gap: 0.35rem;
+}
+
+.subAppImageWrap {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.35rem;
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(79, 216, 218, 0.05) 0px,
+    rgba(79, 216, 218, 0.05) 1px,
+    transparent 1px,
+    transparent 10px
+  );
+  border: 1px solid var(--border);
+  border-radius: 3px;
+}
+
+.subAppImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 2px;
+}
+
+.subAppName {
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.subAppDesc {
+  font-size: 0.68rem;
+  line-height: 1.35;
+  color: var(--text-secondary);
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+@media (max-width: 860px) {
+  /* Desktop-only elements (.lmvTop, .subAppGrid) never render below this
+     breakpoint — Journey.tsx swaps the whole card for a single swappable
+     page (LMV overview, then each subsystem in turn) with small up/down
+     arrows and a vertical swipe gesture. These rules style that mode. */
+  .subAppDesc {
+    font-size: 0.78rem;
+  }
+
+  .subNavArrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.9rem;
+    height: 1.9rem;
+    margin: 0.25rem auto;
+    border: 1px solid var(--accent-soft-border);
+    background: var(--accent-soft);
+    color: var(--accent);
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(79, 216, 218, 0.3);
+    transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+  }
+
+  .subNavArrow:hover {
+    border-color: var(--accent);
+    box-shadow: 0 0 14px rgba(79, 216, 218, 0.5);
+  }
+
+  .subNavArrow:active {
+    transform: scale(0.92);
+  }
+
+  .subNavArrow svg {
+    width: 0.95rem;
+    height: 0.95rem;
+  }
+
+  .lmvCard > .subAppsLabel {
+    text-align: center;
+  }
+
+  .lmvMobilePanel {
+    position: relative;
+    display: grid;
+    overflow: hidden;
+    /* This panel captures its own vertical swipe to switch pages, so it
+       must own that gesture rather than letting the browser treat it as a
+       page scroll. */
+    touch-action: pan-x;
+  }
+
+  .lmvMobilePage {
+    grid-area: 1 / 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: clamp(1rem, 2.5vw, 1.5rem);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+  }
+
+  .lmvMobilePageActive {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .lmvMobilePage .lmvFigure {
+    flex: 0 0 auto;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .lmvMobilePage {
+      transition-duration: 0.01ms;
+    }
+  }
+}
+

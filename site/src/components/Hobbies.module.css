@@ -1,0 +1,82 @@
+.bg {
+  background: repeating-linear-gradient(
+      -115deg,
+      rgba(79, 216, 218, 0.1) 0px,
+      rgba(79, 216, 218, 0.1) 1.5px,
+      transparent 1.5px,
+      transparent 64px
+    ),
+    radial-gradient(circle at 12% 85%, rgba(45, 140, 255, 0.22), transparent 44%),
+    radial-gradient(circle at 90% 10%, rgba(79, 216, 218, 0.24), transparent 42%);
+  background-size: auto, auto, auto;
+}
+
+.stepCard {
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.stepFigure {
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1rem, 2.5vw, 1.5rem);
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(79, 216, 218, 0.05) 0px,
+    rgba(79, 216, 218, 0.05) 1px,
+    transparent 1px,
+    transparent 10px
+  );
+  border-bottom: 1px solid var(--border-bright);
+}
+
+.stepText {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: clamp(1.1rem, 2.5vw, 1.75rem);
+}
+
+.stepHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.4rem 1rem;
+}
+
+.stepHead :global(.mono) {
+  font-size: 0.78rem;
+  color: var(--text-tertiary);
+}
+
+.name {
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  color: var(--text-primary);
+}
+
+.description {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  max-width: 66ch;
+}
+
+.wideImage {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 3px;
+  /* box-shadow: 0 0 0 1px rgba(79, 216, 218, 0.25); */
+}
+
