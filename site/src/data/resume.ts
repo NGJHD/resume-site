@@ -186,7 +186,7 @@ export const hobbies = [
     name: "AI Filmmaking with ComfyUI",
     period: "Since 2025",
     description:
-      "Still getting nowhere with this mode of storytelling after spending hundreds of hours training LoRAs and generating videos. A slipper will be going through my monitor screen soon.",
+      "Still getting nowhere with this mode of storytelling after spending thousands of hours training LoRAs and generating videos. A slipper will be going through my monitor screen soon.",
   },
   {
     name: "Generative Art with ComfyUI",
