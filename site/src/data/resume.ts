@@ -180,7 +180,7 @@ export const hobbies = [
     name: "Watching Movies",
     period: "Since 2007",
     description:
-      "After more than 800 movies, here are some of my favourites.",
+      "After more than 800 movies, here are some of my absolute favourites.",
   },
   {
     name: "AI Filmmaking with ComfyUI",

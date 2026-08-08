@@ -337,7 +337,7 @@ export default function Journey() {
   const header = (
     <>
       <div className="section-head">
-        <span className="eyebrow">02 // Career Journey</span>
+        <span className="eyebrow">02 // Career</span>
         <h2 className="section-title">13 years, one employer, many mission systems.</h2>
       </div>
       <div className={styles.employerHead}>

@@ -31,11 +31,11 @@ export default function Hero() {
         </div>
 
         <div className={styles.actions}>
-          <a href="#journey" className={styles.primaryBtn}>
+          {/* <a href="#journey" className={styles.primaryBtn}>
             View Career Journey
-          </a>
+          </a> */}
           <a href="#contact" className={styles.secondaryBtn}>
-            Get In Touch
+            Contact
           </a>
         </div>
       </div>

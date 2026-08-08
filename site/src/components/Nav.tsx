@@ -3,7 +3,7 @@ import styles from "./Nav.module.css";
 
 const LINKS = [
   { id: "about", label: "About" },
-  { id: "journey", label: "Journey" },
+  { id: "journey", label: "Career" },
   { id: "projects", label: "Personal Projects" },
   { id: "education", label: "Education" },
   { id: "hobbies", label: "Hobbies" },
@@ -113,10 +113,10 @@ export default function Nav() {
           ))}
         </nav>
 
-        <div className={styles.status} aria-hidden="true">
+        {/* <div className={styles.status} aria-hidden="true">
           <span className="status-dot ongoing" />
           <span className={styles.statusText}>AVAILABLE</span>
-        </div>
+        </div> */}
 
         <button
           type="button"
@@ -150,10 +150,10 @@ export default function Nav() {
             </a>
           ))}
         </nav>
-        <div className={styles.mobileStatus}>
+        {/* <div className={styles.mobileStatus}>
           <span className="status-dot ongoing" />
           AVAILABLE
-        </div>
+        </div> */}
       </div>
     </header>
   );

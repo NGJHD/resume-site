@@ -17,75 +17,6 @@ export default function Hobbies() {
   const [photography, computers, movies, aifilm, aiart] = hobbies;
 
   const steps = [
-    <div key={photography.name} className={`hud-panel ${styles.stepCard}`}>
-      <div className={styles.stepFigure}>
-        <img
-          src={PHOTOGRAPHY_IMG.src}
-          alt="Photography samples"
-          width={PHOTOGRAPHY_IMG.width}
-          height={PHOTOGRAPHY_IMG.height}
-          className={styles.wideImage}
-          style={{
-            maxHeight: Math.round(PHOTOGRAPHY_IMG.height * 1.6),
-            maxWidth: Math.round(PHOTOGRAPHY_IMG.width * 1.4),
-          }}
-        />
-      </div>
-      <div className={styles.stepText}>
-        <div className={styles.stepHead}>
-          <h3 className={styles.name}>{photography.name}</h3>
-          <span className="mono">{photography.period}</span>
-        </div>
-        <p className={styles.description}>{photography.description}</p>
-      </div>
-    </div>,
-
-    <div key={computers.name} className={`hud-panel ${styles.stepCard}`}>
-      <div className={styles.stepFigure}>
-        <img
-          src={PC_IMAGE.src}
-          alt="PC build"
-          width={PC_IMAGE.width}
-          height={PC_IMAGE.height}
-          className={styles.wideImage}
-          style={{
-            maxHeight: Math.round(PC_IMAGE.height * 1.8),
-            maxWidth: Math.round(PC_IMAGE.width * 1.8),
-          }}
-        />
-      </div>
-      <div className={styles.stepText}>
-        <div className={styles.stepHead}>
-          <h3 className={styles.name}>{computers.name}</h3>
-          <span className="mono">{computers.period}</span>
-        </div>
-        <p className={styles.description}>{computers.description}</p>
-      </div>
-    </div>,
-
-    <div key={movies.name} className={`hud-panel ${styles.stepCard}`}>
-      <div className={styles.stepFigure}>
-        <img
-          src={MOVIES_IMAGE.src}
-          alt="Watching Movies"
-          width={MOVIES_IMAGE.width}
-          height={MOVIES_IMAGE.height}
-          className={styles.wideImage}
-          style={{
-            maxHeight: Math.round(MOVIES_IMAGE.height * 1.8),
-            maxWidth: Math.round(MOVIES_IMAGE.width * 1.8),
-          }}
-        />
-      </div>
-      <div className={styles.stepText}>
-        <div className={styles.stepHead}>
-          <h3 className={styles.name}>{movies.name}</h3>
-          <span className="mono">{movies.period}</span>
-        </div>
-        <p className={styles.description}>{movies.description}</p>
-      </div>
-    </div>,
-
     <div key={aifilm.name} className={`hud-panel ${styles.stepCard}`}>
       <div className={styles.stepFigure}>
         <img
@@ -129,6 +60,75 @@ export default function Hobbies() {
           <span className="mono">{aiart.period}</span>
         </div>
         <p className={styles.description}>{aiart.description}</p>
+      </div>
+    </div>,
+
+    <div key={photography.name} className={`hud-panel ${styles.stepCard}`}>
+      <div className={styles.stepFigure}>
+        <img
+          src={PHOTOGRAPHY_IMG.src}
+          alt="Photography samples"
+          width={PHOTOGRAPHY_IMG.width}
+          height={PHOTOGRAPHY_IMG.height}
+          className={styles.wideImage}
+          style={{
+            maxHeight: Math.round(PHOTOGRAPHY_IMG.height * 1.6),
+            maxWidth: Math.round(PHOTOGRAPHY_IMG.width * 1.4),
+          }}
+        />
+      </div>
+      <div className={styles.stepText}>
+        <div className={styles.stepHead}>
+          <h3 className={styles.name}>{photography.name}</h3>
+          <span className="mono">{photography.period}</span>
+        </div>
+        <p className={styles.description}>{photography.description}</p>
+      </div>
+    </div>,
+
+    <div key={movies.name} className={`hud-panel ${styles.stepCard}`}>
+      <div className={styles.stepFigure}>
+        <img
+          src={MOVIES_IMAGE.src}
+          alt="Watching Movies"
+          width={MOVIES_IMAGE.width}
+          height={MOVIES_IMAGE.height}
+          className={styles.wideImage}
+          style={{
+            maxHeight: Math.round(MOVIES_IMAGE.height * 1.8),
+            maxWidth: Math.round(MOVIES_IMAGE.width * 1.8),
+          }}
+        />
+      </div>
+      <div className={styles.stepText}>
+        <div className={styles.stepHead}>
+          <h3 className={styles.name}>{movies.name}</h3>
+          <span className="mono">{movies.period}</span>
+        </div>
+        <p className={styles.description}>{movies.description}</p>
+      </div>
+    </div>,
+
+    <div key={computers.name} className={`hud-panel ${styles.stepCard}`}>
+      <div className={styles.stepFigure}>
+        <img
+          src={PC_IMAGE.src}
+          alt="PC build"
+          width={PC_IMAGE.width}
+          height={PC_IMAGE.height}
+          className={styles.wideImage}
+          style={{
+            maxHeight: Math.round(PC_IMAGE.height * 1.8),
+            maxWidth: Math.round(PC_IMAGE.width * 1.8),
+          }}
+        />
+      </div>
+      <div className={styles.stepText}>
+        <div className={styles.stepHead}>
+          <h3 className={styles.name}>{computers.name}</h3>
+          <span className="mono" style={{color:'#ff1744'}}>{computers.period}</span>
+        </div>
+        <p className={styles.description}>{computers.description}</p>
       </div>
     </div>,
   ];
