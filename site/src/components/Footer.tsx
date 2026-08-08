@@ -11,7 +11,7 @@ export default function Footer() {
           <span className="eyebrow">06 // Contact</span>
           <h2 className={styles.heading}>Let's build something.</h2>
           <p className={styles.sub}>
-            Open to conversations about frontend engineering roles.
+            <i>"Alone we can do so little; together we can do so much." – Helen Keller</i>
           </p>
 
           <div className={styles.channels}>

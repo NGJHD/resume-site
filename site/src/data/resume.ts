@@ -176,6 +176,24 @@ export const hobbies = [
     description:
       "Built more than 100 desktops for various churches and people. Overclocking was once a personal passion project.",
   },
+  {
+    name: "Watching Movies",
+    period: "Since 2007",
+    description:
+      "After more than 800 movies, here are some of my favourites.",
+  },
+  {
+    name: "AI Filmmaking with ComfyUI",
+    period: "Since 2025",
+    description:
+      "Still getting nowhere with this mode of storytelling after spending hundreds of hours training LoRAs and generating videos. A slipper will be going through my monitor screen soon.",
+  },
+  {
+    name: "Generative Art with ComfyUI",
+    period: "Since 2025",
+    description:
+      "Creating fantasy scenes of my dreams with ComfyUI.",
+  },
 ];
 
 export const certifications = [

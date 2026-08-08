@@ -67,7 +67,7 @@
   min-width: 0;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 1.55s cubic-bezier(0.16, 0.8, 0.24, 1), transform 1.55s cubic-bezier(0.16, 0.8, 0.24, 1);
+  transition: opacity 1s cubic-bezier(0.16, 0.8, 0.24, 1), transform 1s cubic-bezier(0.16, 0.8, 0.24, 1);
 }
 
 .cardActive {
