@@ -147,13 +147,13 @@ export const personalProjects: PersonalProject[] = [
   {
     name: "Movie Catalogue Software",
     description:
-      "Developed a lightweight C# desktop app that automatically scrapes and catalogues movie details from OMDB for local movie video files.",
+      "Built a lightweight C# desktop app that automatically scrapes and catalogues movie details from OMDB for local movie video files.",
     tags: ["C#", "WPF", ".NET"],
   },
   {
     name: "Music Folder Player",
     description:
-      "Developed a lightweight C# folder-based music player to simplify playlist management on Windows.",
+      "Built a lightweight C# folder-based music player to simplify playlist management on Windows.",
     tags: ["C#", "WPF", ".NET"],
   },
   {
