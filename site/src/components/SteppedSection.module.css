@@ -121,6 +121,7 @@
   background: var(--accent);
   border-color: var(--accent);
   transform: scale(1.2);
+  box-shadow: 0 0 5px 1px cyan;
 }
 
 @media (max-width: 640px) {
