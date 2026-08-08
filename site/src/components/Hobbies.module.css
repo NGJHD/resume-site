@@ -67,7 +67,7 @@
 .description {
   color: var(--text-secondary);
   font-size: 0.92rem;
-  max-width: 66ch;
+  /* max-width: 66ch; */
 }
 
 .wideImage {
