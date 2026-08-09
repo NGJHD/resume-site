@@ -9,9 +9,9 @@ export default function Footer() {
       <div className={styles.inner}>
         <div className={styles.content}>
           <span className="eyebrow">06 // Contact</span>
-          <h2 className={styles.heading}>Let's build something.</h2>
+          <h2 className={styles.heading}>Say hi, or don't.</h2>
           <p className={styles.sub}>
-            <i>"Alone we can do so little; together we can do so much." – Helen Keller</i>
+            <i>Replies within a reasonable amount of time, unless ComfyUI is involved.</i>
           </p>
 
           <div className={styles.channels}>

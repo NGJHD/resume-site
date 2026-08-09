@@ -13,20 +13,17 @@ export default function About() {
             <Reveal className={styles.text}>
               <span className="eyebrow">01 // About</span>
               <h2 className={`section-title ${styles.heading}`}>
-                Building the systems operators trust when it matters.
+                Building things that need to work.
               </h2>
               {/* <p className={styles.body}>{profile.summary}</p> */}
               <p className={styles.body}>
-                Over 13 years at ST Engineering Cloud &amp; Data Center Solutions (previously Mission Software & Services), moving
-                from a solo full-stack engineer on video wall systems to a software
-                manager leading frontend and backend teams on live monitoring platforms
-                and critical systems.
+                That's the day job - mission critical stuff that don't get to fail. The night job is building things that don't need to work like generative art, and a slowly escalating feud with ComfyUI. Details on both below.
               </p>
             </Reveal>
 
             <Reveal delay={120} className={`hud-panel ${styles.matrix}`}>
               <div className={styles.matrixHead}>
-                <span className="mono">CAPABILITY_MATRIX</span>
+                <span className="mono">SKILL_SET</span>
                 <span className="status-dot ongoing" aria-hidden="true" />
               </div>
               <div className={styles.groups}>

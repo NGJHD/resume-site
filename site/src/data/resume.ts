@@ -7,7 +7,7 @@ export const profile = {
   phone: "9474 9449",
   email: "ng.jh.darren@outlook.com",
   summary:
-    "Frontend / Full-stack engineer with 13+ years of experience designing and developing mission critical systems for defence and enterprise environments.",
+    "Building things that need to work",
 };
 
 export const skills = [
@@ -53,12 +53,12 @@ export const experience: Employer[] = [
     status: "ongoing",
     projects: [
       {
-        name: "Integrated Monitoring & Management System",
+        name: "Monitoring Platform",
         role: "UI/UX Manager",
         // team: "2x Frontend, 4x Backend",
         duration: "2020 – Ongoing",
         description:
-          "Led frontend development of a monitoring platform tracking network and equipment health status across multiple sites.",
+          "Led frontend development of a monitoring platform tracking equipment and network statuses across multiple locations.",
         tags: [
           // "React",
           // "React Admin",
@@ -84,7 +84,7 @@ export const experience: Employer[] = [
         // team: "1x Frontend, 7x Backend",
         duration: "2019 – 2020 (1 year)",
         description:
-          "Designed and implemented an analytics dashboard to display various metrics.",
+          "Designed and implemented a dashboard to display various interesting metrics.",
         tags: [],
       },
       {
@@ -102,7 +102,7 @@ export const experience: Employer[] = [
         // team: "2x Frontend, 7x Backend",
         duration: "2013 – 2020 (7 years)",
         description:
-          "Involved from conceptualization to deployment of multiple mission critical applications.",
+          "Involved from the start to the end.",
         tags: [],
         note: "Notable applications delivered under this programme:",
       },
@@ -120,19 +120,19 @@ export const missionApps: MissionApp[] = [
   {
     name: "Command Console",
     description:
-      "Designed and implemented an application providing real-time situational awareness via multiple integrated data and video feeds.",
+      "Providing situation awareness to the CO.",
     tags: [],
   },
   {
-    name: "Less-Lethal Weapon Control System",
+    name: "Water Cannon",
     description:
-      "Developed the frontend to control the water cannon, enabling precise targeting and activation.",
+      "Controlling and enabling precise targeting.",
     tags: [],
   },
   {
-    name: "Chat",
+    name: "Communications",
     description:
-      "Built a lightweight self-discovery communication platform enabling operators to exchange messages and other files.",
+      "A platform to exchange messages and other files.",
     tags: [],
   },
 ];
@@ -168,7 +168,7 @@ export const hobbies = [
   {
     name: "Photography",
     period: "Since 2012",
-    description: "Various photos taken over the years.",
+    description: "Some of the ones that didn't get deleted.",
   },
   {
     name: "Build / Overclock Computers",
@@ -192,7 +192,7 @@ export const hobbies = [
     name: "Generative Art with ComfyUI",
     period: "Since 2025",
     description:
-      "Creating fantasy scenes of my dreams with ComfyUI.",
+      "Creating fantasy scenes of my dreams with ComfyUI. Results vary; dreams don't.",
   },
 ];
 
