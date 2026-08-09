@@ -2,7 +2,8 @@ import { profile } from "../data/resume";
 import styles from "./Hero.module.css";
 
 const FACTS = [
-  { label: "Experience", value: "13+ Years" },
+  { label: "Age", value: "39" },
+  // { label: "Experience", value: "13+ Years" },
   // { label: "Domain", value: "Defence & Enterprise" },
   { label: "Based In", value: "Singapore" },
 ];
@@ -13,7 +14,7 @@ export default function Hero() {
       <div className={styles.sweep} aria-hidden="true" />
 
       <div className={styles.inner}>
-        <span className={`eyebrow ${styles.eyebrow}`}>Software Engineer</span>
+        <span className={`eyebrow ${styles.eyebrow}`}>Occupation: Software Engineer, mostly</span>
 
         <h1 className={styles.name}>
           Ng Jun Hao <span className={styles.nameAccent}>Darren</span>
@@ -34,9 +35,9 @@ export default function Hero() {
           {/* <a href="#journey" className={styles.primaryBtn}>
             View Career Journey
           </a> */}
-          <a href="#contact" className={styles.secondaryBtn}>
+          {/* <a href="#contact" className={styles.secondaryBtn}>
             Contact
-          </a>
+          </a> */}
         </div>
       </div>
 

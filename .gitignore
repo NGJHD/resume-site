@@ -1,3 +1,4 @@
 *.pdf
 .claude/*.local.*
 .vercel
+/Achive
