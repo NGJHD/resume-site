@@ -165,7 +165,7 @@ export const personalProjects: PersonalProject[] = [
   {
     name: "Stock Thesis Monitor Bot",
     description:
-      "Vibe coded a bot using Claude Code that monitors for stock thesis updates (regarding my stocks) from Yahoo news daily and sends me a summary via Telegram.",
+      "Vibe coded a bot using Claude Code that monitors for stock thesis updates (regarding my stocks) from Yahoo News daily and sends a daily summary to me via Telegram.",
     tags: ["NodeJS", "Claude API", "Claude Code"],
   },
 ];
