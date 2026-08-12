@@ -11,7 +11,7 @@ const PROJECT_VISUALS: Record<
   string,
   { image?: { src: string; width: number; height: number }; icon?: ComponentType }
 > = {
-  "Stock Thesis Monitor Bot": { image: { src: thesisImg, width: 3600, height: 2520 }  },
+  "Stock Thesis Monitor Bot": { image: { src: thesisImg, width: 1800, height: 1260 }  },
   "Cryptocurrency Trading Bot": { image: { src: cryptoImg, width: 1704, height: 923 }  },
   "Music Folder Player": { image: { src: musicPlayerImg, width: 895, height: 595 } },
   "Movie Catalogue Software": { image: { src: movieCatalogueImg, width: 1920, height: 1152 } },  
