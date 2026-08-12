@@ -126,7 +126,7 @@ export default function Hobbies() {
       <div className={styles.stepText}>
         <div className={styles.stepHead}>
           <h3 className={styles.name}>{computers.name}</h3>
-          <span className="mono" style={{color:'#ff1744'}}>{computers.period}</span>
+          <span className="mono" style={{color:'#ff5c66'}}>{computers.period}</span>
         </div>
         <p className={styles.description}>{computers.description}</p>
       </div>
