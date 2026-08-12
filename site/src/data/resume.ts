@@ -162,6 +162,12 @@ export const personalProjects: PersonalProject[] = [
       "Developed a fully automated trading system in C# integrating the Gemini Exchange API for real-time order execution using custom indicator-based logic. Added automated daily summary Telegram reports and achieved sustained profitability since 2022.",
     tags: ["C#", ".NET"],
   },
+  {
+    name: "Stock Thesis Monitor Bot",
+    description:
+      "Vibe coded a bot using Claude Code that monitors for stock thesis updates (regarding my stocks) from Yahoo news daily and sends me a summary via Telegram.",
+    tags: ["NodeJS", "Claude API", "Claude Code"],
+  },
 ];
 
 export const hobbies = [

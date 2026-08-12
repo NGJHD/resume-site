@@ -5,6 +5,7 @@ import styles from "./Projects.module.css";
 import musicPlayerImg from "../assets/images/project-music-player.jpg";
 import movieCatalogueImg from "../assets/images/project-movie-catalogue.jpg";
 import cryptoImg from "../assets/images/project-crypto.jpg";
+import thesisImg from "../assets/images/project-thesis.jpg";
 
 const PROJECT_VISUALS: Record<
   string,
@@ -13,6 +14,7 @@ const PROJECT_VISUALS: Record<
   "Movie Catalogue Software": { image: { src: movieCatalogueImg, width: 1920, height: 1152 } },
   "Music Folder Player": { image: { src: musicPlayerImg, width: 895, height: 595 } },
   "Cryptocurrency Trading Bot": { image: { src: cryptoImg, width: 1704, height: 923 }  },
+  "Stock Thesis Monitor Bot": { image: { src: thesisImg, width: 1704, height: 923 }  },
 };
 
 export default function Projects() {
