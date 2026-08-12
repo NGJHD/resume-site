@@ -74,6 +74,19 @@
   letter-spacing: 0.08em;
 }
 
+.stepHead {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.4rem 1rem;
+}
+
+.stepHead :global(.mono) {
+  font-size: 0.78rem;
+  color: var(--text-tertiary);
+}
+
 .name {
   font-size: clamp(1.1rem, 2vw, 1.4rem);
 }

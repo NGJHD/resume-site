@@ -11,10 +11,10 @@ const PROJECT_VISUALS: Record<
   string,
   { image?: { src: string; width: number; height: number }; icon?: ComponentType }
 > = {
-  "Movie Catalogue Software": { image: { src: movieCatalogueImg, width: 1920, height: 1152 } },
-  "Music Folder Player": { image: { src: musicPlayerImg, width: 895, height: 595 } },
+  "Stock Thesis Monitor Bot": { image: { src: thesisImg, width: 3600, height: 2520 }  },
   "Cryptocurrency Trading Bot": { image: { src: cryptoImg, width: 1704, height: 923 }  },
-  "Stock Thesis Monitor Bot": { image: { src: thesisImg, width: 1704, height: 923 }  },
+  "Music Folder Player": { image: { src: musicPlayerImg, width: 895, height: 595 } },
+  "Movie Catalogue Software": { image: { src: movieCatalogueImg, width: 1920, height: 1152 } },  
 };
 
 export default function Projects() {
@@ -45,7 +45,15 @@ export default function Projects() {
         </div>
         <div className={styles.body}>
           {/* <span className={`mono ${styles.index}`}>{String(i + 1).padStart(2, "0")}</span> */}
-          <h3 className={styles.name}>{project.name}</h3>
+          <div className={styles.stepHead}>
+            <h3 className={styles.name}>{project.name}</h3>
+            <span
+              className="mono"
+              style={project.period.includes("-") ? { color: "#ff5c66" } : undefined}
+            >
+              {project.period}
+            </span>
+          </div>
           <p className={styles.description}>{project.description}</p>
           <div className={styles.tags}>
             {project.tags.map((tag) => (

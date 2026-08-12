@@ -139,34 +139,39 @@ export const missionApps: MissionApp[] = [
 
 export type PersonalProject = {
   name: string;
+  period: string;
   description: string;
   tags: string[];
 };
 
 export const personalProjects: PersonalProject[] = [
   {
-    name: "Movie Catalogue Software",
+    name: "Stock Thesis Monitor Bot",
+    period: "Since 2026",
     description:
-      "Built a lightweight C# desktop app that automatically scrapes and catalogues movie details from OMDB for local movie video files.",
-    tags: ["C#", "WPF", ".NET"],
+      "Vibe coded a bot using Claude Code that monitors for stock thesis updates (regarding my stocks) from Yahoo News daily and sends a daily summary to me via Telegram.",
+    tags: ["NodeJS", "Claude API", "Claude Code"],
   },
   {
+    name: "Cryptocurrency Trading Bot",
+    period: "Since 2021",
+    description:
+      "Developed a fully automated trading system in C# integrating the Gemini Exchange API for real-time order execution using custom indicator-based logic. Added automated daily summary Telegram reports and achieved sustained profitability since 2022.",
+    tags: ["C#", ".NET"],
+  },  
+  {
     name: "Music Folder Player",
+    period: "Since 2016",
     description:
       "Built a lightweight C# folder-based music player to simplify playlist management on Windows.",
     tags: ["C#", "WPF", ".NET"],
   },
   {
-    name: "Cryptocurrency Trading Bot",
+    name: "Movie Catalogue Software",
+    period: "Since 2012",
     description:
-      "Developed a fully automated trading system in C# integrating the Gemini Exchange API for real-time order execution using custom indicator-based logic. Added automated daily summary Telegram reports and achieved sustained profitability since 2022.",
-    tags: ["C#", ".NET"],
-  },
-  {
-    name: "Stock Thesis Monitor Bot",
-    description:
-      "Vibe coded a bot using Claude Code that monitors for stock thesis updates (regarding my stocks) from Yahoo News daily and sends a daily summary to me via Telegram.",
-    tags: ["NodeJS", "Claude API", "Claude Code"],
+      "Built a lightweight C# desktop app that automatically scrapes and catalogues movie details from OMDB for local movie video files.",
+    tags: ["C#", "WPF", ".NET"],
   },
 ];
 
