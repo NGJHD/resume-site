@@ -149,8 +149,8 @@ export const personalProjects: PersonalProject[] = [
     name: "Stock Thesis Monitor Bot",
     period: "Since 2026",
     description:
-      "Vibe coded a bot using Claude Code that monitors for stock thesis updates (regarding my stocks) from Yahoo News daily and sends a daily summary to me via Telegram.",
-    tags: ["NodeJS", "Claude API", "Claude Code"],
+      "Vibe coded a bot using Claude Code that monitors for stock thesis updates (regarding my stocks) from Yahoo News daily and sends a daily summary to me via Telegram. [13/Aug/2026: changed to using GPT's Luna model via OpenRouter cos budget :(]",
+    tags: ["NodeJS", "OpenRouter API", "Claude Code"],
   },
   {
     name: "Cryptocurrency Trading Bot",
