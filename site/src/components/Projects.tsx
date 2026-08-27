@@ -1,6 +1,6 @@
 import type { ComponentType } from "react";
 import { personalProjects, isEndedPeriod } from "../data/resume";
-import { imageFitStyle, landscapeReferenceAspect } from "../lib/imageFit";
+import { imageFit, landscapeReferenceAspect } from "../lib/imageFit";
 import SteppedSection from "./SteppedSection";
 import styles from "./Projects.module.css";
 import musicPlayerImg from "../assets/images/project-music-player.jpg";
@@ -28,6 +28,7 @@ export default function Projects() {
   const steps = personalProjects.map((project) => {
     const visual = PROJECT_VISUALS[project.name];
     const Icon = visual?.icon;
+    const fit = visual?.image && imageFit(visual.image, LANDSCAPE_ASPECT, { x: 1.6, y: 1.4 });
     return (
       <div key={project.name} className={`hud-panel ${styles.stepCard}`}>
         <div className={styles.visual}>
@@ -37,8 +38,8 @@ export default function Projects() {
               alt=""
               width={visual.image.width}
               height={visual.image.height}
-              className={styles.visualImage}
-              style={imageFitStyle(visual.image, LANDSCAPE_ASPECT, { x: 1.6, y: 1.4 })}
+              className={`${styles.visualImage} ${fit?.className ?? ""}`}
+              style={fit?.style}
             />
           )}
           {Icon && (

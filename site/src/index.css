@@ -375,3 +375,13 @@ img {
   background: var(--status-live);
   box-shadow: 0 0 8px rgba(95, 217, 122, 0.6);
 }
+
+/* Portrait images are letterboxed into the box the tallest landscape image in
+   their group would occupy, so they can't push a card taller than the landscape
+   ones already do. --landscape-aspect is set per group in src/lib/imageFit.ts.
+   Typed as `img.portrait-capped` so it outranks the single-class .visualImage /
+   .wideImage / .stepImage rules regardless of stylesheet order. */
+img.portrait-capped {
+  aspect-ratio: var(--landscape-aspect);
+  height: auto;
+}

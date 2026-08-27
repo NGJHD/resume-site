@@ -1,6 +1,6 @@
 import { useRef, useState, type ReactNode, type TouchEvent } from "react";
 import { experience, missionApps, type MissionApp } from "../data/resume";
-import { imageFitStyle, landscapeReferenceAspect } from "../lib/imageFit";
+import { imageFit, landscapeReferenceAspect } from "../lib/imageFit";
 import { useMediaQuery } from "../hooks/useMediaQuery";
 import SteppedSection from "./SteppedSection";
 import styles from "./Journey.module.css";
@@ -53,6 +53,7 @@ function StepCard({
   tags: string[];
   image?: StepImage;
 }) {
+  const fit = image && imageFit(image, LANDSCAPE_ASPECT, { x: 1.6, y: 1.4 });
   return (
     <div className={`hud-panel ${styles.stepCard}`}>
       {image && (
@@ -62,8 +63,8 @@ function StepCard({
             alt=""
             width={image.width}
             height={image.height}
-            className={styles.stepImage}
-            style={imageFitStyle(image, LANDSCAPE_ASPECT, { x: 1.6, y: 1.4 })}
+            className={`${styles.stepImage} ${fit?.className ?? ""}`}
+            style={fit?.style}
           />
           {image.caption && <figcaption className={styles.figCaption}>{image.caption}</figcaption>}
         </figure>

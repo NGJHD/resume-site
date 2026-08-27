@@ -1,5 +1,5 @@
 import { hobbies, isEndedPeriod } from "../data/resume";
-import { imageFitStyle, landscapeReferenceAspect } from "../lib/imageFit";
+import { imageFit, landscapeReferenceAspect } from "../lib/imageFit";
 import SteppedSection from "./SteppedSection";
 import styles from "./Hobbies.module.css";
 import photographyGrid from "../assets/images/hobby-photography.jpg";
@@ -48,6 +48,12 @@ const LANDSCAPE_ASPECT = landscapeReferenceAspect(
 export default function Hobbies() {
   const steps = hobbies.map((hobby) => {
     const visual = HOBBY_VISUALS[hobby.name];
+    const fit =
+      visual &&
+      imageFit(visual.image, LANDSCAPE_ASPECT, {
+        x: visual.scaleX ?? DEFAULT_SCALE,
+        y: visual.scaleY ?? DEFAULT_SCALE,
+      });
     return (
       <div key={hobby.name} className={`hud-panel ${styles.stepCard}`}>
         {visual && (
@@ -57,11 +63,8 @@ export default function Hobbies() {
               alt={visual.alt}
               width={visual.image.width}
               height={visual.image.height}
-              className={styles.wideImage}
-              style={imageFitStyle(visual.image, LANDSCAPE_ASPECT, {
-                x: visual.scaleX ?? DEFAULT_SCALE,
-                y: visual.scaleY ?? DEFAULT_SCALE,
-              })}
+              className={`${styles.wideImage} ${fit?.className ?? ""}`}
+              style={fit?.style}
             />
           </div>
         )}
