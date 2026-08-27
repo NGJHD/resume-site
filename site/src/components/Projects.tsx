@@ -1,5 +1,6 @@
 import type { ComponentType } from "react";
 import { personalProjects, isEndedPeriod } from "../data/resume";
+import { imageFitStyle, landscapeReferenceAspect } from "../lib/imageFit";
 import SteppedSection from "./SteppedSection";
 import styles from "./Projects.module.css";
 import musicPlayerImg from "../assets/images/project-music-player.jpg";
@@ -16,8 +17,12 @@ const PROJECT_VISUALS: Record<
   "Stock Thesis Monitor Bot": { image: { src: thesisImg, width: 1800, height: 1260 }  },
   "Cryptocurrency Trading Bot": { image: { src: cryptoImg, width: 1704, height: 923 }  },
   "Music Folder Player": { image: { src: musicPlayerImg, width: 895, height: 595 } },
-  "Movie Catalogue Software": { image: { src: movieCatalogueImg, width: 1920, height: 1152 } },  
+  "Movie Catalogue Software": { image: { src: movieCatalogueImg, width: 1920, height: 1152 } },
 };
+
+const LANDSCAPE_ASPECT = landscapeReferenceAspect(
+  Object.values(PROJECT_VISUALS).flatMap((v) => (v.image ? [v.image] : [])),
+);
 
 export default function Projects() {
   const steps = personalProjects.map((project) => {
@@ -33,10 +38,7 @@ export default function Projects() {
               width={visual.image.width}
               height={visual.image.height}
               className={styles.visualImage}
-              style={{
-                maxHeight: Math.round(visual.image.height * 1.4),
-                maxWidth: Math.round(visual.image.width * 1.6),
-              }}
+              style={imageFitStyle(visual.image, LANDSCAPE_ASPECT, { x: 1.6, y: 1.4 })}
             />
           )}
           {Icon && (

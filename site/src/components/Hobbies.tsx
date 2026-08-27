@@ -1,4 +1,5 @@
 import { hobbies, isEndedPeriod } from "../data/resume";
+import { imageFitStyle, landscapeReferenceAspect } from "../lib/imageFit";
 import SteppedSection from "./SteppedSection";
 import styles from "./Hobbies.module.css";
 import photographyGrid from "../assets/images/hobby-photography.jpg";
@@ -40,6 +41,10 @@ const HOBBY_VISUALS: Record<string, HobbyVisual> = {
   },
 };
 
+const LANDSCAPE_ASPECT = landscapeReferenceAspect(
+  Object.values(HOBBY_VISUALS).map((v) => v.image),
+);
+
 export default function Hobbies() {
   const steps = hobbies.map((hobby) => {
     const visual = HOBBY_VISUALS[hobby.name];
@@ -53,10 +58,10 @@ export default function Hobbies() {
               width={visual.image.width}
               height={visual.image.height}
               className={styles.wideImage}
-              style={{
-                maxHeight: Math.round(visual.image.height * (visual.scaleY ?? DEFAULT_SCALE)),
-                maxWidth: Math.round(visual.image.width * (visual.scaleX ?? DEFAULT_SCALE)),
-              }}
+              style={imageFitStyle(visual.image, LANDSCAPE_ASPECT, {
+                x: visual.scaleX ?? DEFAULT_SCALE,
+                y: visual.scaleY ?? DEFAULT_SCALE,
+              })}
             />
           </div>
         )}

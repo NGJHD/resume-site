@@ -1,5 +1,6 @@
 import { useRef, useState, type ReactNode, type TouchEvent } from "react";
 import { experience, missionApps, type MissionApp } from "../data/resume";
+import { imageFitStyle, landscapeReferenceAspect } from "../lib/imageFit";
 import { useMediaQuery } from "../hooks/useMediaQuery";
 import SteppedSection from "./SteppedSection";
 import styles from "./Journey.module.css";
@@ -31,6 +32,12 @@ const SUBAPP_IMAGES: Record<string, StepImage> = {
   "Communications": { src: chatpostitImg, width: 752, height: 564 },
 };
 
+// Both tables feed the same carousel, so they form one group for sizing.
+const LANDSCAPE_ASPECT = landscapeReferenceAspect([
+  ...Object.values(PROJECT_IMAGES),
+  ...Object.values(SUBAPP_IMAGES),
+]);
+
 function StepCard({
   title,
   duration,
@@ -56,10 +63,7 @@ function StepCard({
             width={image.width}
             height={image.height}
             className={styles.stepImage}
-            style={{
-              maxHeight: Math.round(image.height * 1.4),
-              maxWidth: Math.round(image.width * 1.6),
-            }}
+            style={imageFitStyle(image, LANDSCAPE_ASPECT, { x: 1.6, y: 1.4 })}
           />
           {image.caption && <figcaption className={styles.figCaption}>{image.caption}</figcaption>}
         </figure>
