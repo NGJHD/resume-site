@@ -385,3 +385,19 @@ img.portrait-capped {
   aspect-ratio: var(--landscape-aspect);
   height: auto;
 }
+
+/* On phones a card is usually taller than its own content needs: card height is
+   set by the tallest card in the carousel, so a short description leaves the
+   image box stretched with dead space above and below it.
+
+   The cap above still governs how much height this image *demands* — a
+   percentage height stays indefinite while the browser computes intrinsic size,
+   so `aspect-ratio` is what the card height is calculated from and the card is
+   never made taller. Once the card is laid out and the box is definite,
+   `height: 100%` lets the image *use* the leftover space it didn't ask for.
+   Desktop is deliberately left on the plain cap. */
+@media (max-width: 640px) {
+  img.portrait-capped {
+    height: 100%;
+  }
+}
