@@ -1,16 +1,18 @@
 import type { ComponentType } from "react";
-import { personalProjects } from "../data/resume";
+import { personalProjects, isEndedPeriod } from "../data/resume";
 import SteppedSection from "./SteppedSection";
 import styles from "./Projects.module.css";
 import musicPlayerImg from "../assets/images/project-music-player.jpg";
 import movieCatalogueImg from "../assets/images/project-movie-catalogue.jpg";
 import cryptoImg from "../assets/images/project-crypto.jpg";
 import thesisImg from "../assets/images/project-thesis.jpg";
+import waveKeepImg from "../assets/images/project-wavekeep.webp";
 
 const PROJECT_VISUALS: Record<
   string,
   { image?: { src: string; width: number; height: number }; icon?: ComponentType }
 > = {
+  "Mobile App: Wave Keep": { image: { src: waveKeepImg, width: 200, height: 466 }  },
   "Stock Thesis Monitor Bot": { image: { src: thesisImg, width: 1800, height: 1260 }  },
   "Cryptocurrency Trading Bot": { image: { src: cryptoImg, width: 1704, height: 923 }  },
   "Music Folder Player": { image: { src: musicPlayerImg, width: 895, height: 595 } },
@@ -49,7 +51,7 @@ export default function Projects() {
             <h3 className={styles.name}>{project.name}</h3>
             <span
               className="mono"
-              style={project.period.includes("-") ? { color: "#ff5c66" } : undefined}
+              style={isEndedPeriod(project.period) ? { color: "#ff5c66" } : undefined}
             >
               {project.period}
             </span>

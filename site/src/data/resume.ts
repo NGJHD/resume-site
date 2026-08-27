@@ -146,6 +146,13 @@ export type PersonalProject = {
 
 export const personalProjects: PersonalProject[] = [
   {
+    name: "Mobile App: Wave Keep",
+    period: "Since 2026",
+    description:
+      "Vibe coded a tower defense game targeted at 5 year olds on Android. Used ComfyUI to generate all the assets locally and Claude Code to generate the code. The game is in late stage development.",
+    tags: ["Claude Code","ComfyUI"],
+  },
+  {
     name: "Stock Thesis Monitor Bot",
     period: "Since 2026",
     description:
@@ -175,24 +182,14 @@ export const personalProjects: PersonalProject[] = [
   },
 ];
 
-export const hobbies = [
-  {
-    name: "Photography",
-    period: "Since 2012",
-    description: "Some of the ones that didn't get deleted.",
-  },
-  {
-    name: "Build / Overclock Computers",
-    period: "2009 – 2017",
-    description:
-      "Built more than 100 desktops for various churches and people. Overclocking was once a personal passion project.",
-  },
-  {
-    name: "Watching Movies",
-    period: "Since 2007",
-    description:
-      "After more than 800 movies, here are some of my absolute favourites.",
-  },
+export type Hobby = {
+  name: string;
+  period: string;
+  description: string;
+};
+
+// Listed in display order.
+export const hobbies: Hobby[] = [
   {
     name: "AI Filmmaking with ComfyUI",
     period: "Since 2025",
@@ -205,7 +202,28 @@ export const hobbies = [
     description:
       "Creating fantasy scenes of my dreams with ComfyUI. Results vary; dreams don't.",
   },
+  {
+    name: "Photography",
+    period: "Since 2012",
+    description: "Some of the ones that didn't get deleted.",
+  },
+  {
+    name: "Watching Movies",
+    period: "Since 2007",
+    description:
+      "After more than 800 movies, here are some of my absolute favourites.",
+  },
+  {
+    name: "Build / Overclock Computers",
+    period: "2009 – 2017",
+    description:
+      "Built more than 100 desktops for various churches and people. Overclocking was once a personal passion project.",
+  },
 ];
+
+// A period that names an end year (as opposed to an open-ended "Since ...").
+// Matches both the hyphen-minus and the en dash used across the data above.
+export const isEndedPeriod = (period: string) => /[-–]/.test(period);
 
 export const certifications = [
   { name: "Certified Kubernetes Application Developer (CKAD)", year: "2025" },
