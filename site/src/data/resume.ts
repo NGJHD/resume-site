@@ -149,7 +149,7 @@ export const personalProjects: PersonalProject[] = [
     name: "Mobile App: Wave Keep",
     period: "Since 2026",
     description:
-      "Vibe coded a tower defense game targeted at 5 year olds on Android. Used ComfyUI to generate all the assets locally and Claude Code to generate the code. The game is in late stage development.",
+      "Vibe coded a tower defense game targeted at 5 year olds on Android. Used ComfyUI to generate all the assets locally and Claude Code to generate the code. The game is pending Play Store's release approval.",
     tags: ["Claude Code","ComfyUI"],
   },
   {
