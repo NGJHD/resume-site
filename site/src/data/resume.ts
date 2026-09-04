@@ -149,9 +149,23 @@ export const personalProjects: PersonalProject[] = [
     name: "Mobile App: Wave Keep",
     period: "Since 2026",
     description:
-      "Vibe coded a tower defense game targeted at 5 year olds on Android. Used ComfyUI to generate all the assets locally and Claude Code to generate the code. The game is pending Play Store's release approval.",
+      "Vibe coded a tower defense game targeted at young kids on Android. Used ComfyUI to generate all the assets locally and Claude Code to generate the code. The game is pending Play Store's release.",
     tags: ["Claude Code","ComfyUI"],
   },
+  {
+    name: "Media Whiteboard",
+    period: "Since 2026",
+    description:
+      "Vibe coded a portable whiteboard where users can upload images (e.g. GIF, WEBP, JPG), videos (e.g. MP4), and draw on them. Then they can export the whiteboard as a webp file that loops indefinitely.",
+    tags: ["Claude Code"],
+  },  
+  {
+    name: "Video Trim & Crop",
+    period: "Since 2026",
+    description:
+      "Vibe coded a portable tool for trimming, cropping, and rotating videos with a simple interface.",
+    tags: ["Claude Code"],
+  },  
   {
     name: "Stock Thesis Monitor Bot",
     period: "Since 2026",

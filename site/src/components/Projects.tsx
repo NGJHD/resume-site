@@ -8,6 +8,8 @@ import movieCatalogueImg from "../assets/images/project-movie-catalogue.jpg";
 import cryptoImg from "../assets/images/project-crypto.jpg";
 import thesisImg from "../assets/images/project-thesis.jpg";
 import waveKeepImg from "../assets/images/project-wavekeep.webp";
+import mediaWhiteboardImg from "../assets/images/project-mediawhiteboard.webp";
+import videoTrimCropImg from "../assets/images/project-videoTrimCrop.png";
 
 const PROJECT_VISUALS: Record<
   string,
@@ -18,6 +20,8 @@ const PROJECT_VISUALS: Record<
   "Cryptocurrency Trading Bot": { image: { src: cryptoImg, width: 1704, height: 923 }  },
   "Music Folder Player": { image: { src: musicPlayerImg, width: 895, height: 595 } },
   "Movie Catalogue Software": { image: { src: movieCatalogueImg, width: 1920, height: 1152 } },
+  "Media Whiteboard": { image: { src: mediaWhiteboardImg, width: 631, height: 320 } },
+  "Video Trim & Crop": { image: { src: videoTrimCropImg, width: 1345, height: 853 } },
 };
 
 const LANDSCAPE_ASPECT = landscapeReferenceAspect(
@@ -75,7 +79,7 @@ export default function Projects() {
   const header = (
     <div className="section-head">
       <span className="eyebrow">03 // Personal Projects</span>
-      <h2 className="section-title">Built outside working hours.</h2>
+      <h2 className="section-title">Built outside working hours. <a href="https://github.com/NGJHD?tab=repositories" target="_blank" style={{ color: "var(--accent)", textDecoration: "underline" }}>GitHub Repo</a></h2>
     </div>
   );
 
