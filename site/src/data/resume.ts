@@ -174,9 +174,17 @@ export const personalProjects: PersonalProject[] = [
     name: "Stock Thesis Monitor Bot",
     period: "Since 2026",
     description:
-      "Built a bot that monitors Yahoo News daily for updates relevant to my stock investment theses and delivers a curated daily summary via Telegram.",
+      "Built a bot that monitors Yahoo News daily for updates relevant to my numerous stock investment theses and delivers a curated daily summary via Telegram.",
     tags: ["OpenRouter API", "Claude Code", "Windows", "Telegram"],
     repo: "",
+  },
+  {
+    name: "Kanban Board",
+    period: "Since 2026",
+    description:
+      "Tons of Kanban boards out there. None did what I wanted with a priority system, so naturally I wasted a day building my own. 😂",
+    tags: ["Claude Code", "Windows"],
+    repo: "https://github.com/NGJHD/Kanban-App",
   },
   {
     name: "Cryptocurrency Trading Bot",

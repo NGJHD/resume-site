@@ -10,6 +10,7 @@ import thesisImg from "../assets/images/project-thesis.webp";
 import waveKeepImg from "../assets/images/project-wavekeep.webp";
 import mediaWhiteboardImg from "../assets/images/project-mediawhiteboard.webp";
 import videoTrimCropImg from "../assets/images/project-videoTrimCrop.png";
+import kanbanBoardImg from "../assets/images/project-kanban-board.png";
 
 const PROJECT_VISUALS: Record<
   string,
@@ -22,6 +23,7 @@ const PROJECT_VISUALS: Record<
   "Movie Catalogue Software": { image: { src: movieCatalogueImg, width: 1920, height: 1152 } },
   "Media Whiteboard": { image: { src: mediaWhiteboardImg, width: 631, height: 320 } },
   "Video Trim & Crop": { image: { src: videoTrimCropImg, width: 1345, height: 853 } },
+  "Kanban Board": { image: { src: kanbanBoardImg, width: 1912, height: 879 } },
 };
 
 const LANDSCAPE_ASPECT = landscapeReferenceAspect(
