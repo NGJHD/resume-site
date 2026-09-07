@@ -2,7 +2,7 @@ import { profile } from "../data/resume";
 import styles from "./Hero.module.css";
 
 const FACTS = [
-  { label: "Age", value: "39" },
+  { label: "Age", value: new Date().getFullYear() - 1987 - (new Date() < new Date(new Date().getFullYear(), 11, 3) ? 1 : 0) },
   // { label: "Experience", value: "13+ Years" },
   // { label: "Domain", value: "Defence & Enterprise" },
   { label: "Based In", value: "Singapore" },
