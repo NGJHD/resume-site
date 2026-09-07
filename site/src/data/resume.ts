@@ -149,50 +149,50 @@ export const personalProjects: PersonalProject[] = [
     name: "Mobile App: Wave Keep",
     period: "Since 2026",
     description:
-      "Vibe coded a tower defense game targeted at young kids on Android. Used ComfyUI to generate all the assets locally and Claude Code to generate the code. The game is pending Play Store's release.",
-    tags: ["Claude Code","ComfyUI"],
+      "Built a tower defense game for kids on Android. Generated all the game assets locally with ComfyUI and used Claude Code to build the game. It’s currently pending Google Play Store approval.",
+    tags: ["Claude Code", "ComfyUI", "Android"],
   },
   {
     name: "Media Whiteboard",
     period: "Since 2026",
     description:
-      "Vibe coded a portable whiteboard where users can upload images (e.g. GIF, WEBP, JPG), videos (e.g. MP4), and draw on them. Then they can export the whiteboard as a webp file that loops indefinitely.",
-    tags: ["Claude Code"],
+      "Ever wanted to make a collage or animated collage without dealing with complicated apps? I built an app just for that. Drop in your images, annotate, hit generate and your static or animated WebP is ready to upload. Fully portable, no installation required.",
+    tags: ["Claude Code", "Windows"],
   },  
   {
     name: "Video Trim & Crop",
     period: "Since 2026",
     description:
-      "Vibe coded a portable tool for trimming, cropping, and rotating videos with a simple interface.",
-    tags: ["Claude Code"],
+      "Just need to rotate, crop, or trim a video without firing up Adobe Premiere? I built a simple app for exactly that. Fully portable, no installation required.",
+    tags: ["Claude Code", "Windows"],
   },  
   {
     name: "Stock Thesis Monitor Bot",
     period: "Since 2026",
     description:
-      "Vibe coded a bot using Claude Code that monitors for stock thesis updates (regarding my stocks) from Yahoo News daily and sends a daily summary to me via Telegram. [13/Aug/2026: changed to using GPT's Luna model via OpenRouter cos budget :(]",
-    tags: ["NodeJS", "OpenRouter API", "Claude Code"],
+      "Built a bot that monitors Yahoo News daily for updates relevant to my stock investment theses and delivers a curated daily summary via Telegram.",
+    tags: ["OpenRouter API", "Claude Code", "Windows", "Telegram"],
   },
   {
     name: "Cryptocurrency Trading Bot",
     period: "Since 2021",
     description:
       "Developed a fully automated trading system in C# integrating the Gemini Exchange API for real-time order execution using custom indicator-based logic. Added automated daily summary Telegram reports and achieved sustained profitability since 2022.",
-    tags: ["C#", ".NET"],
+    tags: ["C#", ".NET", "Windows"],
   },  
   {
     name: "Music Folder Player",
     period: "Since 2016",
     description:
       "Built a lightweight C# folder-based music player to simplify playlist management on Windows.",
-    tags: ["C#", "WPF", ".NET"],
+    tags: ["C#", "WPF", ".NET", "Windows"],
   },
   {
     name: "Movie Catalogue Software",
     period: "Since 2012",
     description:
       "Built a lightweight C# desktop app that automatically scrapes and catalogues movie details from OMDB for local movie video files.",
-    tags: ["C#", "WPF", ".NET"],
+    tags: ["C#", "WPF", ".NET", "Windows"],
   },
 ];
 

@@ -6,7 +6,7 @@ import styles from "./Projects.module.css";
 import musicPlayerImg from "../assets/images/project-music-player.jpg";
 import movieCatalogueImg from "../assets/images/project-movie-catalogue.jpg";
 import cryptoImg from "../assets/images/project-crypto.jpg";
-import thesisImg from "../assets/images/project-thesis.jpg";
+import thesisImg from "../assets/images/project-thesis.webp";
 import waveKeepImg from "../assets/images/project-wavekeep.webp";
 import mediaWhiteboardImg from "../assets/images/project-mediawhiteboard.webp";
 import videoTrimCropImg from "../assets/images/project-videoTrimCrop.png";
@@ -16,7 +16,7 @@ const PROJECT_VISUALS: Record<
   { image?: { src: string; width: number; height: number }; icon?: ComponentType }
 > = {
   "Mobile App: Wave Keep": { image: { src: waveKeepImg, width: 200, height: 466 }  },
-  "Stock Thesis Monitor Bot": { image: { src: thesisImg, width: 1800, height: 1260 }  },
+  "Stock Thesis Monitor Bot": { image: { src: thesisImg, width: 1988, height: 1260 }  },
   "Cryptocurrency Trading Bot": { image: { src: cryptoImg, width: 1704, height: 923 }  },
   "Music Folder Player": { image: { src: musicPlayerImg, width: 895, height: 595 } },
   "Movie Catalogue Software": { image: { src: movieCatalogueImg, width: 1920, height: 1152 } },
