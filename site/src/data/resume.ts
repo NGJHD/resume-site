@@ -142,15 +142,17 @@ export type PersonalProject = {
   period: string;
   description: string;
   tags: string[];
+  repo: string;
 };
 
 export const personalProjects: PersonalProject[] = [
   {
-    name: "Mobile App: Wave Keep",
+    name: "Wave Keep",
     period: "Since 2026",
     description:
       "Built a tower defense game for kids on Android. Generated all the game assets locally with ComfyUI and used Claude Code to build the game. It’s currently pending Google Play Store approval.",
     tags: ["Claude Code", "ComfyUI", "Android"],
+    repo: "",
   },
   {
     name: "Media Whiteboard",
@@ -158,6 +160,7 @@ export const personalProjects: PersonalProject[] = [
     description:
       "Ever wanted to make a collage or animated collage without dealing with complicated apps? I built an app just for that. Drop in your images, annotate, hit generate and your static or animated WebP is ready to upload. Fully portable, no installation required.",
     tags: ["Claude Code", "Windows"],
+    repo: "https://github.com/NGJHD/media-whiteboard",
   },  
   {
     name: "Video Trim & Crop",
@@ -165,6 +168,7 @@ export const personalProjects: PersonalProject[] = [
     description:
       "Just need to rotate, crop, or trim a video without firing up Adobe Premiere? I built a simple app for exactly that. Fully portable, no installation required.",
     tags: ["Claude Code", "Windows"],
+    repo: "https://github.com/NGJHD/video-trim-crop-app",
   },  
   {
     name: "Stock Thesis Monitor Bot",
@@ -172,6 +176,7 @@ export const personalProjects: PersonalProject[] = [
     description:
       "Built a bot that monitors Yahoo News daily for updates relevant to my stock investment theses and delivers a curated daily summary via Telegram.",
     tags: ["OpenRouter API", "Claude Code", "Windows", "Telegram"],
+    repo: "",
   },
   {
     name: "Cryptocurrency Trading Bot",
@@ -179,6 +184,7 @@ export const personalProjects: PersonalProject[] = [
     description:
       "Developed a fully automated trading system in C# integrating the Gemini Exchange API for real-time order execution using custom indicator-based logic. Added automated daily summary Telegram reports and achieved sustained profitability since 2022.",
     tags: ["C#", ".NET", "Windows"],
+    repo: "",
   },  
   {
     name: "Music Folder Player",
@@ -186,6 +192,8 @@ export const personalProjects: PersonalProject[] = [
     description:
       "Built a lightweight C# folder-based music player to simplify playlist management on Windows.",
     tags: ["C#", "WPF", ".NET", "Windows"],
+    repo: "https://github.com/NGJHD/FolderPlayer",
+
   },
   {
     name: "Movie Catalogue Software",
@@ -193,6 +201,7 @@ export const personalProjects: PersonalProject[] = [
     description:
       "Built a lightweight C# desktop app that automatically scrapes and catalogues movie details from OMDB for local movie video files.",
     tags: ["C#", "WPF", ".NET", "Windows"],
+    repo: "https://github.com/NGJHD/MovieCatelogSoftware",
   },
 ];
 

@@ -15,9 +15,9 @@ const PROJECT_VISUALS: Record<
   string,
   { image?: { src: string; width: number; height: number }; icon?: ComponentType }
 > = {
-  "Mobile App: Wave Keep": { image: { src: waveKeepImg, width: 200, height: 466 }  },
-  "Stock Thesis Monitor Bot": { image: { src: thesisImg, width: 1988, height: 1260 }  },
-  "Cryptocurrency Trading Bot": { image: { src: cryptoImg, width: 1704, height: 923 }  },
+  "Wave Keep": { image: { src: waveKeepImg, width: 200, height: 466 } },
+  "Stock Thesis Monitor Bot": { image: { src: thesisImg, width: 1988, height: 1260 } },
+  "Cryptocurrency Trading Bot": { image: { src: cryptoImg, width: 1704, height: 923 } },
   "Music Folder Player": { image: { src: musicPlayerImg, width: 895, height: 595 } },
   "Movie Catalogue Software": { image: { src: movieCatalogueImg, width: 1920, height: 1152 } },
   "Media Whiteboard": { image: { src: mediaWhiteboardImg, width: 631, height: 320 } },
@@ -55,7 +55,15 @@ export default function Projects() {
         <div className={styles.body}>
           {/* <span className={`mono ${styles.index}`}>{String(i + 1).padStart(2, "0")}</span> */}
           <div className={styles.stepHead}>
-            <h3 className={styles.name}>{project.name}</h3>
+            <h3 className={styles.name}>{project.name} {project.repo && (
+              <>
+                {"["}
+                <a href={project.repo} target="_blank" className={styles.repoLink}>
+                  Repo
+                </a>
+                {"]"}
+              </>
+            )}</h3>
             <span
               className="mono"
               style={isEndedPeriod(project.period) ? { color: "#ff5c66" } : undefined}
@@ -79,7 +87,7 @@ export default function Projects() {
   const header = (
     <div className="section-head">
       <span className="eyebrow">03 // Personal Projects</span>
-      <h2 className="section-title">Built outside working hours. <a href="https://github.com/NGJHD?tab=repositories" target="_blank" style={{ color: "var(--accent)", textDecoration: "underline" }}>GitHub Repo</a></h2>
+      <h2 className="section-title">Built outside working hours.</h2>
     </div>
   );
 
