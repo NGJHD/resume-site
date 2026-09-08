@@ -11,6 +11,7 @@ import waveKeepImg from "../assets/images/project-wavekeep.webp";
 import mediaWhiteboardImg from "../assets/images/project-mediawhiteboard.webp";
 import videoTrimCropImg from "../assets/images/project-videoTrimCrop.png";
 import kanbanBoardImg from "../assets/images/project-kanban-board.png";
+import meetingImg from "../assets/images/project-meeting.png";
 
 const PROJECT_VISUALS: Record<
   string,
@@ -24,6 +25,7 @@ const PROJECT_VISUALS: Record<
   "Media Whiteboard": { image: { src: mediaWhiteboardImg, width: 631, height: 320 } },
   "Video Trim & Crop": { image: { src: videoTrimCropImg, width: 1345, height: 853 } },
   "Kanban Board": { image: { src: kanbanBoardImg, width: 1912, height: 879 } },
+  "Meeting Summariser / Minutes Generator": { image: { src: meetingImg, width: 895, height: 468 } },
 };
 
 const LANDSCAPE_ASPECT = landscapeReferenceAspect(

@@ -147,6 +147,14 @@ export type PersonalProject = {
 
 export const personalProjects: PersonalProject[] = [
   {
+    name: "Meeting Summariser / Minutes Generator",
+    period: "Since 2026",
+    description:
+      "Built an app that takes in meeting audio and generates a summary and minutes. It hosts and uses local models for speech-to-text (whisper-large-v3-turbo) and summarisation (Qwen3.8-27B-UD-Q4_K_M). Fully portable, no installation required.",
+    tags: ["Claude Code", "Windows"],
+    repo: "https://github.com/NGJHD/Meeting-Summarizer",
+  },
+  {
     name: "Wave Keep",
     period: "Since 2026",
     description:
