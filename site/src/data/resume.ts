@@ -150,7 +150,7 @@ export const personalProjects: PersonalProject[] = [
     name: "Meeting Summariser / Minutes Generator",
     period: "Since 2026",
     description:
-      "Built an app that takes in meeting audio and generates a summary and minutes. It hosts and uses local models for speech-to-text (whisper-large-v3-turbo) and summarisation (Qwen3.8-27B-UD-Q4_K_M). Fully portable, no installation required.",
+      "Built an app that takes in audio and generates a summary and minutes. It hosts and uses local models for speech-to-text (whisper-large-v3-turbo) and summarisation (Qwen3.8-27B-UD-Q4_K_M). Fully portable, no installation required.",
     tags: ["Claude Code", "Windows"],
     repo: "https://github.com/NGJHD/Meeting-Summarizer",
   },
@@ -190,7 +190,7 @@ export const personalProjects: PersonalProject[] = [
     name: "Kanban Board",
     period: "Since 2026",
     description:
-      "Tons of Kanban boards out there. None did what I wanted with a priority system, so naturally I wasted a day building my own. 😂",
+      "Tons of Kanban boards out there. None did what I wanted with a priority system, so naturally I wasted a hour building my own. 😂",
     tags: ["Claude Code", "Windows"],
     repo: "https://github.com/NGJHD/Kanban-App",
   },
