@@ -190,7 +190,7 @@ export const personalProjects: PersonalProject[] = [
     name: "Kanban Board",
     period: "Since 2026",
     description:
-      "Tons of Kanban boards out there. None did what I wanted with a priority system, so naturally I wasted a hour building my own. 😂",
+      "Tons of Kanban boards out there. None did what I wanted with a priority tag, so naturally I bullied Claude into making one. 😂",
     tags: ["Claude Code", "Windows"],
     repo: "https://github.com/NGJHD/Kanban-App",
   },
