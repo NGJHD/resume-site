@@ -1,4 +1,6 @@
 *.pdf
 .claude/*.local.*
 .vercel
-/Achive
+/Archive/
+/recommendations.md
+/RELEASE_GUIDE.txt
