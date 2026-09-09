@@ -2,5 +2,4 @@
 .claude/*.local.*
 .vercel
 /Archive/
-/recommendations.md
 /RELEASE_GUIDE.txt
