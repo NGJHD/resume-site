@@ -12,6 +12,7 @@ import mediaWhiteboardImg from "../assets/images/project-mediawhiteboard.webp";
 import videoTrimCropImg from "../assets/images/project-videoTrimCrop.png";
 import kanbanBoardImg from "../assets/images/project-kanban-board.png";
 import meetingImg from "../assets/images/project-meeting.png";
+import portKillerImg from "../assets/images/project-port-killer.png";
 
 const PROJECT_VISUALS: Record<
   string,
@@ -26,6 +27,7 @@ const PROJECT_VISUALS: Record<
   "Video Trim & Crop": { image: { src: videoTrimCropImg, width: 1345, height: 853 } },
   "Kanban Board": { image: { src: kanbanBoardImg, width: 1912, height: 879 } },
   "Meeting Summariser / Minutes Generator": { image: { src: meetingImg, width: 895, height: 468 } },
+  "Windows Port Killer": { image: { src: portKillerImg, width: 1913, height: 1018 } },
 };
 
 const LANDSCAPE_ASPECT = landscapeReferenceAspect(

@@ -187,6 +187,14 @@ export const personalProjects: PersonalProject[] = [
     repo: "",
   },
   {
+    name: "Windows Port Killer",
+    period: "Since 2026",
+    description:
+      "Built a tool to easily kill processes running on specific ports on Windows. It actually a simple utility but I like the UI so I'm listing it here 😂",
+    tags: ["Claude Code", "Windows"],
+    repo: "https://github.com/NGJHD/port-killer",
+  },
+  {
     name: "Kanban Board",
     period: "Since 2026",
     description:

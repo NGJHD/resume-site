@@ -1,0 +1,11 @@
+{
+  "name": "personal-site-root",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix site run dev --",
+    "build": "npm --prefix site run build --",
+    "lint": "npm --prefix site run lint --",
+    "preview": "npm --prefix site run preview --",
+    "install:site": "npm --prefix site install"
+  }
+}
