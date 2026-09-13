@@ -143,30 +143,40 @@ export type PersonalProject = {
   description: string;
   tags: string[];
   repo: string;
+  playStore?: string;
 };
 
 export const personalProjects: PersonalProject[] = [
   {
-    name: "Meeting Summariser / Minutes Generator",
+    name: "Composition Marker",
     period: "Since 2026",
     description:
-      "Built an app that takes in audio and generates a summary and minutes. It hosts and uses local models for speech-to-text (whisper-large-v3-turbo) and summarisation (Qwen3.8-27B-UD-Q4_K_M). Fully portable, no installation required.",
+      "An app that marks handwritten compositions from photos and generates feedback using a bundled, locally hosted Qwen3.8-27B model. Self-contained - no installation required.",
     tags: ["Claude Code", "Windows"],
-    repo: "https://github.com/NGJHD/Meeting-Summarizer",
-  },
+    repo: "https://github.com/NGJHD/Composition-Marker",
+  },  
   {
     name: "Wave Keep",
     period: "Since 2026",
     description:
-      "Built a tower defense game for kids on Android. Generated all the game assets locally with ComfyUI and used Claude Code to build the game. It’s currently pending Google Play Store approval.",
+      "Built a tower defense game for kids on Android. Generated all the game assets locally with ComfyUI and used Claude Code to build the game. Published on Play Store.",
     tags: ["Claude Code", "ComfyUI", "Android"],
     repo: "",
+    playStore: "https://play.google.com/store/apps/details?id=com.wavekeep.game",
   },
+  {
+    name: "Meeting Summariser / Minutes Generator",
+    period: "Since 2026",
+    description:
+      "Built an app that takes in audio and generates a summary and minutes. It hosts and uses local models for speech-to-text (whisper-large-v3-turbo) and summarisation (Qwen3.8-27B-UD-Q4_K_M). Self-contained - no installation required.",
+    tags: ["Claude Code", "Windows"],
+    repo: "https://github.com/NGJHD/Meeting-Summarizer",
+  },  
   {
     name: "Media Whiteboard",
     period: "Since 2026",
     description:
-      "Ever wanted to make a collage or animated collage without dealing with complicated apps? I built an app just for that. Drop in your images, annotate, hit generate and your static or animated WebP is ready to upload. Fully portable, no installation required.",
+      "Ever wanted to make a collage or animated collage without dealing with complicated apps? I built an app just for that. Drop in your images, annotate, hit generate and your static or animated WebP is ready to upload. Self-contained - no installation required.",
     tags: ["Claude Code", "Windows"],
     repo: "https://github.com/NGJHD/media-whiteboard",
   },  
@@ -174,7 +184,7 @@ export const personalProjects: PersonalProject[] = [
     name: "Video Trim & Crop",
     period: "Since 2026",
     description:
-      "Just need to rotate, crop, or trim a video without firing up Adobe Premiere? I built a simple app for exactly that. Fully portable, no installation required.",
+      "Just need to rotate, crop, or trim a video without firing up Adobe Premiere? I built a simple app for exactly that. Self-contained - no installation required.",
     tags: ["Claude Code", "Windows"],
     repo: "https://github.com/NGJHD/video-trim-crop-app",
   },  
@@ -190,7 +200,7 @@ export const personalProjects: PersonalProject[] = [
     name: "Windows Port Killer",
     period: "Since 2026",
     description:
-      "Built a tool to easily kill processes running on specific ports on Windows. It actually a simple utility but I like the UI so I'm listing it here 😂",
+      "Built a tool to easily kill processes running on specific ports on Windows. It's actually a simple utility but I like the UI so I'm listing it here 😂. Self-contained - no installation required",
     tags: ["Claude Code", "Windows"],
     repo: "https://github.com/NGJHD/port-killer",
   },
@@ -198,7 +208,7 @@ export const personalProjects: PersonalProject[] = [
     name: "Kanban Board",
     period: "Since 2026",
     description:
-      "Tons of Kanban boards out there. None did what I wanted with a priority tag, so naturally I bullied Claude into making one. 😂",
+      "Tons of Kanban boards out there. None did what I wanted with a priority tag, so naturally I bullied Claude into making one 😂. Self-contained - no installation required",
     tags: ["Claude Code", "Windows"],
     repo: "https://github.com/NGJHD/Kanban-App",
   },
@@ -214,7 +224,7 @@ export const personalProjects: PersonalProject[] = [
     name: "Music Folder Player",
     period: "Since 2016",
     description:
-      "Built a lightweight C# folder-based music player to simplify playlist management on Windows.",
+      "Built a lightweight, portable C# folder-based music player to simplify playlist management on Windows.",
     tags: ["C#", "WPF", ".NET", "Windows"],
     repo: "https://github.com/NGJHD/FolderPlayer",
 
@@ -223,7 +233,7 @@ export const personalProjects: PersonalProject[] = [
     name: "Movie Catalogue Software",
     period: "Since 2012",
     description:
-      "Built a lightweight C# desktop app that automatically scrapes and catalogues movie details from OMDB for local movie video files.",
+      "Built a lightweight, portable C# desktop app that automatically scrapes and catalogues movie details from OMDB for local movie video files.",
     tags: ["C#", "WPF", ".NET", "Windows"],
     repo: "https://github.com/NGJHD/MovieCatelogSoftware",
   },
